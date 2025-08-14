@@ -44,7 +44,7 @@ const Bannersection = ({
           </h1>
         </motion.div>
 
-        <div className="lg:flex-grow" />
+      
 
         {/* Features */}
         <motion.div
