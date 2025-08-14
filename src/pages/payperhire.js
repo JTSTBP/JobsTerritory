@@ -4,6 +4,7 @@ import Bannersection from "../components/Raas/banner";
 import WhyChoosePayPerHire from "../components/PayPerHire/whychoose";
 import PayPerHireProcess from "../components/PayPerHire/process";
 import Footer from "../components/home/footer";
+import FAQSection from "../components/home/faqs";
 
 
 const PayperHire = () => {
@@ -22,6 +23,7 @@ const PayperHire = () => {
       />
       <WhyChoosePayPerHire />
       <PayPerHireProcess />
+      <FAQSection/>
       <Footer />
     </div>
   );

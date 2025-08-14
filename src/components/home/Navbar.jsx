@@ -4,24 +4,30 @@ import React, { useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showResources, setShowResources] = useState(false);
   const location = useLocation();
   const currentPath = location.pathname;
 
   const isActive = (path) => currentPath === path;
-  const navItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "#about" },
-    { name: "Raas", href: "/Raas" },
-    { name: "Fractional Hiring", href: "/FractionHiring" },
-    { name: "Pay Per Hire", href: "#payperhire" },
-    { name: "Contact Us", href: "#contact" },
-  ];
+ 
   const menuItems = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/About" },
+    // { name: "About", path: "/About" },
     { name: "Raas", path: "/Raas" },
     { name: "Fraction Hiring", path: "/FractionHiring" },
     { name: "Pay Per Hire", path: "/Payperhire" },
+    { name: "Resources", path: "#" },
+  ];
+
+  const miditems = [
+    { name: "Home", path: "/" },
+    // { name: "About", path: "/About" },
+    { name: "Raas", path: "/Raas" },
+    { name: "Fraction Hiring", path: "/FractionHiring" },
+    { name: "Pay Per Hire", path: "/Payperhire" },
+    { name: "Resources", path: "#" },
+    { name: "ContactUs", path: "/ContactUs" },
+    { name: "Hire Now", path: "#" },
   ];
   // find active index (fallback to 0 if route not found)
   const foundIndex = menuItems.findIndex((m) => m.path === location.pathname);
@@ -32,9 +38,8 @@ const Navbar = () => {
   const rightItems = menuItems.slice(activeIndex + 1);
   return (
     <nav className="bg-[#EFEFEF] border-b border-gray-200 font-inter">
-      {/* Logo */}
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex justify-between items-center h-16 overflow-x-auto whitespace-nowrap scroll-smooth ">
+        <div className="flex justify-between items-center h-16   whitespace-nowrap  ">
           {/* logo */}
           <Link to="/">
             <img
@@ -44,98 +49,175 @@ const Navbar = () => {
             />
           </Link>
 
-          <div className="hidden md:flex items-center">
+          <div className="hidden lg:flex items-center ">
             {/* Left group (all items before active) */}
             {leftItems.length > 0 && (
               <>
-                {/* rec1 image */}
                 <img src="/images/rec1.png" className="h-10" alt="rec-left" />
-                <div className="flex items-center bg-white  h-10 px-4 space-x-6">
-                  {leftItems.map((it) => (
-                    <Link
-                      key={it.path}
-                      to={it.path}
-                      className="whitespace-nowrap"
-                    >
-                      <span className="text-[#2F1656] text-base font-medium cursor-pointer hover:underline">
-                        {it.name}
-                      </span>
-                    </Link>
-                  ))}
+                <div className="flex items-center bg-white h-10 px-4 space-x-6">
+                  {leftItems.map((it) =>
+                    it.name === "Resources" ? (
+                      <div key={it.path} className="relative">
+                        <button
+                          onClick={() => setShowResources(!showResources)}
+                          className="text-[#2F1656] text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap hover:underline px-2 py-1"
+                        >
+                          {it.name}
+                        </button>
+                        {showResources && (
+                          <div className="absolute mt-2 w-40 bg-white text-black rounded shadow-lg z-50">
+                            <a
+                              href="#"
+                              className="block px-4 py-2 hover:bg-gray-200"
+                            >
+                              Case Studies
+                            </a>
+                            <a
+                              href="#"
+                              className="block px-4 py-2 hover:bg-gray-200"
+                            >
+                              Blogs
+                            </a>
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <Link
+                        key={it.path}
+                        to={it.path}
+                        className="whitespace-nowrap"
+                      >
+                        <span className="text-[#2F1656] text-xs sm:text-sm md:text-base cursor-pointer hover:underline">
+                          {it.name}
+                        </span>
+                      </Link>
+                    )
+                  )}
                 </div>
-                {/* rec2 image */}
                 <img src="/images/rec2.png" className="h-10" alt="rec-right" />
               </>
             )}
 
-            {/* Active item (keeps rec1 -> box -> rec2 + conditional left/right line) */}
+            {/* Active item */}
             <div className="relative flex items-center mx-4">
-              {/* Left connecting white line shown if there are items to the left */}
               {leftItems.length > 0 && (
                 <div className="absolute left-0 top-1/2 w-6 h-[5px] bg-white transform -translate-x-full -translate-y-1/2"></div>
               )}
 
-              {/* rec1 image */}
               <img src="/images/rec1.png" className="h-10" alt="rec-left" />
 
-              {/* active text box (width adapts; min width keeps shape) */}
               <div className="min-w-[6rem] h-10 flex items-center justify-center px-4 bg-white">
                 <Link to={activeItem.path}>
-                  <span className="text-[#2F1656] text-base font-medium cursor-pointer whitespace-nowrap">
+                  <span className="text-[#2F1656] text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap">
                     {activeItem.name}
                   </span>
                 </Link>
               </div>
 
-              {/* rec2 image */}
               <img src="/images/rec2.png" className="h-10" alt="rec-right" />
 
-              {/* Right connecting white line shown if there are items to the right */}
               {rightItems.length > 0 && (
                 <div className="absolute right-0 top-1/2 w-6 h-[5px] bg-white transform translate-x-full -translate-y-1/2"></div>
               )}
             </div>
 
-            {/* Right group (all items after active) */}
+            {/* Right group */}
             {rightItems.length > 0 && (
               <>
-                {/* rec1 image */}
                 <img src="/images/rec1.png" className="h-10" alt="rec-left" />
-                <div className="flex items-center bg-white  h-10 px-4 space-x-6">
-                  {rightItems.map((it) => (
-                    <Link
-                      key={it.path}
-                      to={it.path}
-                      className="whitespace-nowrap"
-                    >
-                      <span className="text-[#2F1656] text-base font-medium cursor-pointer hover:underline">
-                        {it.name}
-                      </span>
-                    </Link>
-                  ))}
+                <div className="flex items-center bg-white h-10 px-4 space-x-6">
+                  {rightItems.map((it) =>
+                    it.name === "Resources" ? (
+                      <div key={it.path} className="relative">
+                        <button
+                          onClick={() => setShowResources(!showResources)}
+                          className="text-[#2F1656] text-xs sm:text-sm md:text-base cursor-pointer whitespace-nowrap hover:underline px-2 py-1"
+                        >
+                          {it.name}
+                        </button>
+                        {showResources && (
+                          <div className="absolute mt-2 w-40 bg-white text-black rounded shadow-lg z-50">
+                            <a
+                              href="#"
+                              className="block px-4 py-2 hover:bg-gray-200"
+                            >
+                              Case Studies
+                            </a>
+                            <a
+                              href="#"
+                              className="block px-4 py-2 hover:bg-gray-200"
+                            >
+                              Blogs
+                            </a>
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <Link
+                        key={it.path}
+                        to={it.path}
+                        className="whitespace-nowrap"
+                      >
+                        <span className="text-[#2F1656] text-xs sm:text-sm md:text-base cursor-pointer hover:underline">
+                          {it.name}
+                        </span>
+                      </Link>
+                    )
+                  )}
                 </div>
-
                 <img src="/images/rec2.png" className="h-10" alt="rec-right" />
               </>
             )}
           </div>
 
-          {/* desk options */}
-          {/* <ul className="hidden md:flex items-center gap-4">
-            {navItems.map((item) => (
-              <li key={item}>
-                <Link
-                  to={item.href}
-                  className=" whitespace-nowrap bg-white shadow px-5 py-2 rounded-full text-[#1B084C] font-medium text-sm hover:scale-105 transition"
-                >
-                  {" "}
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul> */}
+          <div className="hidden md:block  lg:hidden  text-[12px]">
+            <div className="flex">
+              <img src="/images/rec1.png" className="h-10" alt="rec-right" />
+              <div className="flex bg-white items-center gap-5">
+                {miditems.map((it) =>
+                  it.name === "Resources" ? (
+                    <div key={it.path} className="relative">
+                      <button
+                        onClick={() => setShowResources(!showResources)}
+                        className="text-[#2F1656]  cursor-pointer whitespace-nowrap hover:underline px-2 py-1"
+                      >
+                        {it.name}
+                      </button>
+                      {showResources && (
+                        <div className="absolute mt-2 w-40 bg-white text-black rounded shadow-lg z-50">
+                          <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-200"
+                          >
+                            Case Studies
+                          </a>
+                          <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-200"
+                          >
+                            Blogs
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      key={it.path}
+                      to={it.path}
+                      className="whitespace-nowrap"
+                    >
+                      <span className="text-[#2F1656]  cursor-pointer hover:underline">
+                        {it.name}
+                      </span>
+                    </Link>
+                  )
+                )}
+              </div>
+              <img src="/images/rec2.png" className="h-10" alt="rec-right" />
+            </div>
+          </div>
           {/* Desktop CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-6">
             <div className="relative">
               <a
                 href="/ContactUs"
@@ -154,6 +236,7 @@ const Navbar = () => {
               </button>
             </div>
           </div>
+
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
@@ -197,9 +280,9 @@ const Navbar = () => {
 
         {/* Mobile Dropdown */}
         {isOpen && (
-          <div className="md:hidden border-t border-gray-200 bg-gray-50 absolute top-16 left-0 w-full shadow-md z-10">
+          <div className="md:hidden border-t border-gray-200 bg-gray-50 absolute top-16 left-0 w-full shadow-md z-[60]">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {navItems.slice(0, 4).map((item) => (
+              {menuItems.slice(0, 4).map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
@@ -208,6 +291,31 @@ const Navbar = () => {
                   {item.name}
                 </a>
               ))}
+              {/* Mobile Resources Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={() => setShowResources(!showResources)}
+                  className="w-full text-left px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-md text-sm font-medium"
+                >
+                  Resources
+                </button>
+                {showResources && (
+                  <div className="ml-4 border-l border-gray-200 pl-4">
+                    <a
+                      href="/case-studies"
+                      className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md text-sm"
+                    >
+                      Case Studies
+                    </a>
+                    <a
+                      href="/blogs"
+                      className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md text-sm"
+                    >
+                      Blogs
+                    </a>
+                  </div>
+                )}
+              </div>
 
               <div className="border-t border-gray-200 pt-3 mt-3 space-y-2">
                 <a

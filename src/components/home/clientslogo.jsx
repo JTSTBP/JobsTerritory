@@ -16,6 +16,7 @@ const ClientLogos = () => {
     "/images/img2.png",
     "/images/img3.png",
     "/images/img4.png",
+    "/images/unac.png",
   ];
 
   const allImages = [...images, ...images];
@@ -40,47 +41,32 @@ const ClientLogos = () => {
         </motion.div>
       </div>
 
-      {/* Scrolling Images */}
-      <div className="relative overflow-hidden">
-        <div className="w-full flex justify-center">
-          <div className="relative w-4/5 overflow-hidden">
-            <div className="flex animate-scroll">
-              {allImages.map((src, i) => (
-                <div
-                  key={i}
-                  className="w-1/3 sm:w-1/5 flex-shrink-0 flex justify-center px-2 sm:px-4"
-                >
-                  <img
-                    src={src}
-                    alt={`slide-${i}`}
-                    className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-contain"
-                  />
-                </div>
-              ))}
-            </div>
+      {/* Background Image with Scrolling Logos */}
+      <div className="relative w-full h-40 sm:h-60 overflow-hidden">
+        {/* Vector Background */}
+        <img
+          src="/images/vector1.png"
+          alt="background"
+          className="absolute inset-0 w-full h-full z-0"
+        />
+
+        {/* Scrolling Logos */}
+        <div className="absolute inset-0 flex  overflow-hidden z-10">
+          <div className="flex animate-scroll">
+            {allImages.map((src, i) => (
+              <div
+                key={i}
+                className="w-1/3 sm:w-1/5 flex-shrink-0 flex  px-2 sm:px-4"
+              >
+                <img
+                  src={src}
+                  alt={`slide-${i}`}
+                  className="w-24 h-20 sm:w-32 sm:h-32 md:w-40 md:h-28 object-contain"
+                />
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-
-      {/* Background Image with Logo */}
-      <div className="relative w-full h-20 sm:h-40 clip-bg">
-        <img
-          src="/images/vector.png"
-          alt="background"
-          className="w-full h-full "
-        />
-
-        {/* Logo */}
-        <img
-          src="/images/unac.png"
-          alt="Unacademy"
-          className="
-    absolute
-    top-2 left-4 sm:top-3 sm:left-16
-    md:top-4 md:left-20 lg:top-6 lg:left-24
-    w-20 sm:w-32 md:w-40 lg:w-48
-  "
-        />
       </div>
 
       {/* Stats Circles with Motion */}

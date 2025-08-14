@@ -9,6 +9,7 @@ import {
   Zap,
   Shield,
 } from "lucide-react";
+import HireSection from "../commonsections/ready";
 
 const steps = [
   {
@@ -41,20 +42,13 @@ const steps = [
 export default function PayPerHireProcess() {
   return (
     <div>
-      <section
-        style={{
-          backgroundImage: "url('/images/processbg.png')",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-        className=" text-white py-16 px-4 md:px-12 font-sans mt-10"
-      >
+      <section className=" text-white py-16   font-sans mt-10 bg-[#EFEFEF]">
         {/* Heading */}
-        <div className="  mx-auto mb-14 flex flex-col justify-end items-end">
-          <h2 className="text-3xl md:text-4xl  font-museo">
+        <div className="  mx-auto mb-14 flex flex-col justify-end items-end text-[#1B084C]">
+          <h1 className="text-3xl md:text-5xl  font-museo">
             How Pay Per Hire Works
-          </h2>
-          <p className="text-sm md:text-base mt-2 text-gray-200">
+          </h1>
+          <p className="text-sm md:text-base mt-2 ">
             Simple, transparent process with payment only upon successful
             placement.
           </p>
@@ -93,48 +87,16 @@ export default function PayPerHireProcess() {
         ))}
       </div> */}
         <div>
-          <img src="/images/processimg.png" />
+          <img src="/images/pphwhy.png" />
         </div>
       </section>
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        viewport={{ once: true }}
-        className="text-center"
-      >
-        <div className="bg-[#1b084ced]  text-white relative overflow-hidden py-16">
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            className="absolute top-4 right-4 w-16 h-16 border-2 border-white/20 rounded-full"
-          />
-          <motion.div
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 3, repeat: Infinity }}
-            className="absolute bottom-4 left-4 w-8 h-8 bg-white/20 rounded-full"
-          />
-
-          <h3 className="text-3xl  mb-4 font-museo font-bold">
-            Ready to Hire
-            <span className="font-normal"> Risk-Free?</span>
-          </h3>
-          <p className="text-white/90 mb-6 max-w-2xl mx-auto font-inter">
-            Start your risk-free recruitment journey today. No upfront costs, no
-            long- term commitments.
-          </p>
-          <motion.button
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
-            }}
-            whileTap={{ scale: 0.95 }}
-            className="text-[#1B084C] bg-white text-primary-600 px-8 py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center space-x-2"
-          >
-            <span>Start Hiring Now </span>
-          </motion.button>
-        </div>
-      </motion.div>
+      <HireSection
+      title="Ready to Hire"
+      highlight="Risk-Free?"
+      description="Start your risk-free recruitment journey today. No upfront costs, no long-term commitments."
+      buttonText="Start Hiring Now"
+      backgroundImage="/images/trasfrom.png"
+    />
     </div>
   );
 }

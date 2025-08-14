@@ -36,7 +36,7 @@ export default function ContactForm() {
         </p>
 
         {/* First & Last Name */}
-        <div className="grid md:grid-cols-2 gap-4 mb-4">
+        <div className="grid md:grid-cols-2 gap-4 mb-6">
           <div>
             <label className="block text-sm font-medium  mb-1">
               First Name*
@@ -48,7 +48,7 @@ export default function ContactForm() {
               onChange={handleChange}
               placeholder="First Name"
               required
-              className="w-full border border-purple-400 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="w-full border border-purple-400 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
             />
           </div>
           <div>
@@ -60,13 +60,13 @@ export default function ContactForm() {
               onChange={handleChange}
               placeholder="Last Name"
               required
-              className="w-full border border-purple-400 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="w-full border border-purple-400 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
             />
           </div>
         </div>
 
         {/* Email */}
-        <div className="mb-4">
+        <div className="mb-6">
           <label className="block text-sm font-medium  mb-1">Email*</label>
           <input
             type="email"
@@ -75,12 +75,12 @@ export default function ContactForm() {
             onChange={handleChange}
             placeholder="you@company.com"
             required
-            className="w-full border border-purple-400 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full border border-purple-400 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
           />
         </div>
 
         {/* Phone Number */}
-        <div className="mb-4">
+        <div className="mb-6">
           <label className="block text-sm font-medium  mb-1">
             Phone Number
           </label>
@@ -89,13 +89,41 @@ export default function ContactForm() {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            placeholder="US - +(555) 000 - 00000"
-            className="w-full border border-purple-400 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            placeholder="In +91 9999999999"
+            className="w-full border border-purple-400 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
           />
         </div>
 
-        {/* Message */}
-        <div className="mb-4">
+        {/* Company name */}
+        <div className="mb-6">
+          <label className="block text-sm font-medium  mb-1">
+            Company Name
+          </label>
+          <input
+            type="text"
+            name="companyname"
+            value={formData.companyname}
+            onChange={handleChange}
+            placeholder="Company Name"
+            className="w-full border border-purple-400 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
+        </div>
+
+        {/* Job Title */}
+        <div className="mb-6">
+          <label className="block text-sm font-medium  mb-1">Job Title</label>
+          <input
+            type="text"
+            name="Jobtitle"
+            value={formData.Jobtitle}
+            onChange={handleChange}
+            placeholder="Job Title"
+            className="w-full border border-purple-400 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
+        </div>
+
+        {/* Message
+        <div className="mb-6">
           <label className="block text-sm font-medium  mb-1">Message*</label>
           <textarea
             name="message"
@@ -106,6 +134,21 @@ export default function ContactForm() {
             rows="4"
             className="w-full border border-purple-400 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
           ></textarea>
+        </div> */}
+
+        <div className="mb-6">
+          <label className="block text-sm font-medium  mb-1">
+            By providing phone number and submitting this form you are consuming
+            to be contacted by Job Territiory , Inc through SMS message
+          </label>
+          <input
+            type="text"
+            name="linkdin"
+            value={formData.linkdin}
+            onChange={handleChange}
+            placeholder="Linkdin URL"
+            className="w-full border border-purple-400 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
         </div>
 
         {/* Checkbox */}
@@ -125,14 +168,12 @@ export default function ContactForm() {
           </label>
         </div>
 
-   
-
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-[50%] mx-auto block bg-gradient-to-r from-[#2D274B] to-[#5500FE] text-white py-2 rounded-md font-medium hover:opacity-90 transition"
+          className="w-[50%] mx-auto block bg-gradient-to-r from-[#2D274B] to-[#5500FE] text-white py-2 rounded-xl font-medium hover:opacity-90 transition"
         >
-          Send Message
+         Contact With Us
         </button>
       </form>
     </section>
