@@ -285,7 +285,7 @@ const Navbar = () => {
               {menuItems.slice(0, 4).map((item) => (
                 <a
                   key={item.name}
-                  href={item.href}
+                  href={item.path}
                   className="block px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-all duration-200 text-sm font-medium"
                 >
                   {item.name}

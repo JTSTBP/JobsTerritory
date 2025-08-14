@@ -45,8 +45,8 @@ export default function ContactUsicons() {
             Come say hello to our office HQ
           </p>
           <div className="text-[#6A1FFF] text-sm">
-            <p>Mumbai, Delhi, Bangalore</p>
-            <p>Pune, Hyderabad</p>
+            <p>Bangalore</p>
+        
           </div>
         </div>
 
@@ -59,12 +59,7 @@ export default function ContactUsicons() {
           <p className="text-gray-600 text-sm mb-1">
             Mon–Fri from 8 am to 5 pm
           </p>
-          <a
-            href="tel:+919876543210"
-            className="text-[#6A1FFF] text-sm hover:underline"
-          >
-            +91 98765 43210
-          </a>
+         
         </div>
       </div>
     </section>
