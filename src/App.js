@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+
+
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import Homepage from "./pages/homepage";
+import RaasPage from "./pages/Raas";
+import PayperHire from "./pages/payperhire";
+import FractionalHiring from "./pages/fractionalhiring";
+import ContactUs from "./pages/contactus";
+
+
+
+
+export default function App() {
+
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/Raas" element={<RaasPage />} />
+          <Route path="/FractionHiring" element={<FractionalHiring />} />
+          <Route path="/Payperhire" element={<PayperHire />} />
+          <Route path="/ContactUs" element={<ContactUs/>}/>
+        </Routes>
+      </Router>
+      <ToastContainer position="top-right" autoClose={3000} />
+    </>
   );
 }
-
-export default App;
