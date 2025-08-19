@@ -314,7 +314,7 @@ const Footer = () => {
             </div>
 
             {/* Industries */}
-            <div>
+            {/* <div>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -349,7 +349,7 @@ const Footer = () => {
                   ))}
                 </ul>
               </motion.div>
-            </div>
+            </div> */}
 
             {/* Contact & Quick Links */}
             <div>
@@ -371,7 +371,7 @@ const Footer = () => {
                       className="flex items-center space-x-3 text-gray-400 hover:text-primary-400 transition-all duration-200"
                     >
                       <Phone size={18} />
-                      <span>+91 98765 43210</span>
+                      <span>+91 9999999999</span>
                     </motion.div>
                     <motion.div
                       whileHover={{ x: 5 }}
@@ -386,9 +386,8 @@ const Footer = () => {
                     >
                       <MapPin size={18} className="mt-1 flex-shrink-0" />
                       <span>
-                        Mumbai, Delhi, Bangalore
-                        <br />
-                        Pune, Hyderabad
+                       Bangalore
+                       
                       </span>
                     </motion.div>
                   </div>

@@ -16,9 +16,9 @@ const FractionalHiring = () => {
       <Navbar />
       <Bannersection
         backgroundImage="/images/herobgfh.png"
-        heading="Flexible. Affordable. Expert."
+        heading="Your Growth Accelerator, On Demand"
         heading1="Fractional Hiring"
-        paragraph="Access top-tier talent on a part-time or project basis. Perfect for specialized roles, seasonal needs, or when you need expertise without full-time commitment."
+        paragraph="When projects can’t wait months for leadership, we connect you with battle-tested industry experts who deliver measurable impact within days — without the cost or commitment of full-time hires."
         primaryButtonText="Explore"
         secondrybuttontext="Book a call"
         onPrimaryButtonClick={() => console.log("Demo clicked")}
@@ -28,15 +28,14 @@ const FractionalHiring = () => {
       <ProjectBasedWorkCard />
       <BenefitsCard />
       <HireSection
-        title="Ready to Try"
-        highlight=" Fractional Hiring?"
-        description="StAccess top-tier talent without the full-time commitment. Perfect for projects,  
-                                       seasonal needs, and specialized expertise.
+        title="Ready to See Impact in Weeks, "
+        highlight=" Not Months?"
+        description="Let’s bring in a leader who can accelerate growth, solve high-stake challenges, or execute critical projects — exactly when you need them.
 "
         buttonText="Start Fractional Hiring"
         backgroundImage="/images/trasfrom.png"
       />
-      <FAQSection/>
+      <FAQSection />
       <Footer />
     </div>
   );

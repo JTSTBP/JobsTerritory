@@ -166,26 +166,27 @@ import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 export default function BenefitsCard() {
-  const text = "lanoitcarF gniriH";
+  const text = "gniriH lanoitcarF  ";
 
-  const benefits = [
-    {
-      title: "Cost Efficiency",
-      text: "Save 40-60% compared to full-time hires while getting the same level of expertise.",
-    },
-    {
-      title: "Immediate Impact",
-      text: "Experienced professionals who can contribute from day one without lengthy onboarding.",
-    },
-    {
-      title: "Flexibility",
-      text: "Scale up or down based on project needs and business requirements.",
-    },
-    {
-      title: "Access to Top Talent",
-      text: "Attract senior professionals who prefer flexible work arrangements.",
-    },
-  ];
+ const benefits = [
+   {
+     title: "Cost Efficiency Without Compromise",
+     text: "Save 40–60% vs. full-time hires while getting boardroom level expertise that delivers real results.",
+   },
+   {
+     title: "Day-One Impact",
+     text: "Battle tested leaders who step in, take charge, and deliver wins immediately.",
+   },
+   {
+     title: "Agility On Demand",
+     text: "Scale talent up or down instantly to match projects or market shifts.",
+   },
+   {
+     title: "Elite Talent Network",
+     text: "Direct access to ex CXOs, specialists, and transformation leaders who choose high impact, flexible roles.",
+   },
+ ];
+
 
   const stats = [
     { value: "40-60%", label: "Cost Reduction vs Full-time" },
@@ -203,7 +204,7 @@ export default function BenefitsCard() {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <h2 className="text-3xl md:text-4xl font-bold font-museo inline-block pb-2">
-          Benefits of Fractional Hiring
+          Why Businesses Keep Coming Back to Us
         </h2>
         <p className="mt-2">
           Why companies choose fractional hiring over traditional employment
@@ -262,26 +263,25 @@ export default function BenefitsCard() {
           />
         </div>
 
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 hidden lg:block">
-          <div className="relative w-[170px] h-[170px]">
-            {text.split("").map((letter, i) => (
-              <span
-                key={i}
-                className="absolute left-1/2 top-1/2 origin-[0_0] animate-orbit"
-                style={{
-                  transform: `rotate(${
-                    (800 / text.length) * i
-                  }deg) translateX(70px)`,
-
-                  fontSize: "14px",
-                  color: "#6B21A8",
-                  letterSpacing: "2px", // adds spacing visually
-                  animationDelay: `${i * 0.1}s`,
-                }}
-              >
-                {letter}
-              </span>
-            ))}
+        <div className="absolute bottom-[-34px] left-[51%] transform -translate-x-1/2 hidden lg:block">
+          
+          <div className="flex justify-center items-center h-[1vh]]">
+            <div className="circle">
+              {text.split("").map((char, index) => {
+                const rotate = index * (360 / text.length);
+                return (
+                  <span
+                    key={index}
+                    className="circle-text"
+                    style={{
+                      transform: `rotate(${rotate}deg) translate(5rem) rotate(-${rotate}deg)`,
+                    }}
+                  >
+                    {char}
+                  </span>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

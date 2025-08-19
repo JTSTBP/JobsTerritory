@@ -86,7 +86,7 @@ const Bannersection = ({
           >
             <button
               onClick={onPrimaryButtonClick}
-              className="w-auto sm:w-[30%] flex items-center justify-center bg-gradient-to-r from-[#2c1361] to-[#7300ff] text-white text-sm font-medium px-6 py-2 rounded-full border-2 border-[#cfc0ff] shadow-md"
+              className="w-auto sm:w-[236px] flex items-center justify-center bg-gradient-to-r from-[#2c1361] to-[#7300ff] text-white text-sm font-medium px-6 py-2 rounded-full border-2 border-[#cfc0ff] shadow-md"
             >
               {primaryButtonText}
             </button>
@@ -110,7 +110,7 @@ const Bannersection = ({
               whileTap={{ scale: 0.95 }}
               className="flex items-center gap-2"
             >
-              <button className="xl:w-[230px] flex items-center justify-center bg-gradient-to-r from-[#7300ff] to-[#2c1361] text-white text-sm font-medium px-6 py-2 rounded-full border-2 border-[#cfc0ff] shadow-md">
+              <button className="xl:w-[236px] flex items-center justify-center bg-gradient-to-r from-[#7300ff] to-[#2c1361] text-white text-sm font-medium px-6 py-2 rounded-full border-2 border-[#cfc0ff] shadow-md">
                 {secondrybuttontext}
               </button>
               <div className="w-1 h-0.5 bg-[#cfc0ff]" />

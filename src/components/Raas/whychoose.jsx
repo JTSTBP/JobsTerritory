@@ -12,11 +12,10 @@ export default function WhychooseRaas() {
               What Is JT RaaS?
             </h2>
             <p className="text-base md:text-lg text-gray-700 max-w-3xl">
-              JT RaaS is a plug-and-play hiring engine designed for startups and
-              SMEs. Instead of paying per hire or building a full HR team, you
-              get 2 dedicated recruiters + 1 account manager for ₹2L/month.
-              Share as many roles as you need — we’ll handle sourcing,
-              screening, and coordination.
+              JT RaaS — Recruitment as a Service, Reinvented for Startups & SMEs
+              Get 2 dedicated recruiters + 1 account manager embedded in your
+              team. We source, screen, and coordinate so you can focus on
+              scaling — with precision hiring handled end-to-end
             </p>
           </div>
 
@@ -31,11 +30,9 @@ export default function WhychooseRaas() {
               />
               <div>
                 <h3 className="text-lg font-semibold mb-1 font-museo">
-                  Dedicated Team Just for You
+                  Unlimited Hiring
                 </h3>
-                <p className="text-gray-600">
-                  A recruitment team embedded within your company.
-                </p>
+                <p className="text-gray-600">Fill as many roles as you need.</p>
               </div>
             </div>
             <div className="flex items-start gap-4 p-6 ">
@@ -46,10 +43,10 @@ export default function WhychooseRaas() {
               />
               <div>
                 <h3 className="text-lg font-semibold mb-1">
-                  Aligned with Your Culture
+                  Fixed Monthly Cost
                 </h3>
                 <p className="text-gray-600">
-                  We understand your values, needs, and hiring goals.
+                  Predictable spend, zero surprise fees.
                 </p>
               </div>
             </div>
@@ -61,10 +58,10 @@ export default function WhychooseRaas() {
               />
               <div>
                 <h3 className="text-lg font-semibold mb-1">
-                  Scalable and Flexible
+                  Industry Expert Recruiters
                 </h3>
                 <p className="text-gray-600">
-                  A solution that grows with your business.
+                  Specialists who know your market.
                 </p>
               </div>
             </div>
@@ -75,11 +72,9 @@ export default function WhychooseRaas() {
                 src={"/images/raasic4.png"}
               />
               <div>
-                <h3 className="text-lg font-semibold mb-1">
-                  Full-Cycle Hiring, Optimized!
-                </h3>
+                <h3 className="text-lg font-semibold mb-1">Faster Closures</h3>
                 <p className="text-gray-600">
-                  From sourcing to onboarding, we continuously improve.
+                  First vetted profiles in 72 hours, with results guaranteed.
                 </p>
               </div>
             </div>

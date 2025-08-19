@@ -3,59 +3,60 @@ import { motion } from "framer-motion";
 import { Zap, Shield } from "lucide-react";
 
 export default function ProjectBasedWorkCard() {
-  const cards = [
-    {
-      icon: <img className="w-[3rem]" src="/images/cas1.png" />,
-      title: "Project-Based Work",
-      description:
-        "Need expertise for a specific project with defined timelines and deliverables.",
-      points: [
-        "Product launches",
-        "Digital transformations",
-        "Market research",
-      ],
-    },
-    {
-      icon: <img className="w-[3rem]" src="/images/cas2.png" />,
-      title: "Seasonal Demands",
-      description:
-        "Handle peak seasons or cyclical business needs without permanent hires.",
-      points: ["Holiday sales", "Tax season", "Event management"],
-    },
-    {
-      icon: <img className="w-[3rem]" src="/images/cas3.png" />,
-      title: "Specialized Skills",
-      description:
-        "Access niche expertise that you don't need full-time but is critical for success.",
-      points: ["Data science", "Cybersecurity", "Compliance"],
-    },
+const cards = [
+  {
+    icon: <img className="w-[3rem]" src="/images/cas1.png" />,
+    title: "Mission-Critical Projects",
+    description:
+      "Leaders who’ve launched products, led transformations, and delivered cost-cutting models.",
+    points: ["Fast and at scale"],
+  },
+  {
+    icon: <img className="w-[3rem]" src="/images/cas2.png" />,
+    title: "Seasonal High-Impact",
+    description: "Peak season specialists handling campaigns and compliance.",
+    points: [
+      "Holiday blitz campaigns",
+      "Tax-season compliance",
+      "Deployed in under 15 days",
+    ],
+  },
+  {
+    icon: <img className="w-[3rem]" src="/images/cas3.png" />,
+    title: "Elite Specialist Roles",
+    description: "Niche expertise in critical areas delivered by top leaders.",
+    points: [
+      "Cybersecurity",
+      "Compliance",
+      "High-profile events",
+      "Former CXOs",
+      "Award-winning leaders",
+    ],
+  },
+  {
+    icon: <img className="w-[3rem]" src="/images/cas4.png" />,
+    title: "Interim Leadership",
+    description: "Immediate authority to stabilize and drive performance.",
+    points: ["CTOs", "Department heads", "Project leads"],
+  },
+  {
+    icon: <img className="w-[3rem]" src="/images/cas5.png" />,
+    title: "Risk-Free Trials",
+    description: "Prove fit and ROI before committing.",
+    points: ["90-day leadership trials", "82% convert to full-time"],
+  },
+  {
+    icon: <img className="w-[3rem]" src="/images/cas6.png" />,
+    title: "Rapid Scaling",
+    description: "Build teams instantly to seize opportunities.",
+    points: [
+      "Emergency teams in 72 hours",
+      "Project task forces",
+      "Beat competitors to market",
+    ],
+  },
+];
 
-    {
-      icon: <img className="w-[3rem]" src="/images/cas4.png" />,
-      title: "Interim Leadership",
-      description:
-        "Fill leadership gaps while searching for permanent hires or during transitions.",
-      points: ["Interim CTO", "Project Manager", "Department heads"],
-    },
-    {
-      icon: <img className="w-[3rem]" src="/images/cas5.png" />,
-      title: "Risk Mitigation",
-      description:
-        "Test talent and cultural fit before making full-time commitments.",
-      points: ["Trial periods", "Skill validation", "Team Dynamic"],
-    },
-    {
-      icon: <img className="w-[3rem]" src="/images/cas6.png" />,
-      title: "Quick Scaling",
-      description:
-        "Rapidly scale your team for urgent needs without lengthy hiring processes.",
-      points: [
-        "Emergency projects",
-        "Competitive responses",
-        "Market opportunities",
-      ],
-    },
-  ];
 
     return (
       <div>
@@ -64,9 +65,7 @@ export default function ProjectBasedWorkCard() {
             <h1 className="text-3xl font-bold  font-museo">
               Perfect Use Cases
             </h1>
-            <p className=" mt-2">
-              Fractional hiring works best for these scenarios
-            </p>
+            <p className=" mt-2">Where We Give You the Edge</p>
 
             <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
               {cards.map((card, idx) => (
@@ -89,7 +88,6 @@ export default function ProjectBasedWorkCard() {
             </div>
           </div>
         </section>
-      
       </div>
     );
 }

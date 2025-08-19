@@ -52,16 +52,16 @@ const ClientLogos = () => {
 
         {/* Scrolling Logos */}
         <div className="absolute inset-0 flex  overflow-hidden z-10">
-          <div className="flex animate-scroll">
+          <div className="flex animate-scroll gap-7">
             {allImages.map((src, i) => (
               <div
                 key={i}
-                className="w-1/3 sm:w-1/5 flex-shrink-0 flex  px-2 sm:px-4"
+                className="w-1/3 sm:w-1/5 flex-shrink-0 flex  px-2 sm:px-4 "
               >
                 <img
                   src={src}
                   alt={`slide-${i}`}
-                  className="w-24 h-20 sm:w-32 sm:h-32 md:w-40 md:h-28 object-contain"
+                  className="w-24 h-20 sm:w-32 sm:h-32 md:w-44 md:h-28 object-contain"
                 />
               </div>
             ))}

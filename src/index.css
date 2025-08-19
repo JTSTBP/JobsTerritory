@@ -16,3 +16,27 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+.circle {
+  position: relative;
+  width: 170px;  /* Circle diameter */
+  height: 170px;
+  animation: spin 10s linear infinite; /* Rotates the circle */
+}
+
+.circle-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0; /* Rotate around center */
+
+  font-size: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

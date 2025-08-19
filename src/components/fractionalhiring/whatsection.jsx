@@ -9,13 +9,12 @@ export default function Whysection() {
           {/* Heading */}
           <div className="mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4 font-museo">
-              What is Fractional Hiring?
+              What Makes Our Fractional Hiring Different
             </h2>
             <p className="text-base md:text-lg text-gray-700 max-w-3xl">
-              Fractional hiring allows you to access specialized talent on a
-              part-time, project-based, or seasonal basis. It's perfect for
-              companies that need specific expertise without the commitment and
-              cost of full-time employees.
+              We don’t just match CVs — We embed proven leaders — former CXOs,
+              industry disruptors, and specialist consultants — who’ve built,
+              scaled, and transformed businesses like yours.
             </p>
           </div>
 
@@ -30,10 +29,10 @@ export default function Whysection() {
               />
               <div>
                 <h3 className="text-lg font-semibold mb-1 font-museo">
-                  Senior Expertise, Fractional Cost
+                  Senior Expertise at a Fraction of the Cost
                 </h3>
                 <p className="text-gray-600">
-                  A recruitment team embedded within your company.
+                  Save 40–60% vs. hiring equivalent full-time leaders.
                 </p>
               </div>
             </div>
@@ -44,12 +43,9 @@ export default function Whysection() {
                 src={"/images/raasic3.png"}
               />
               <div>
-                <h3 className="text-lg font-semibold mb-1">
-                  Flexible Engagement Models
-                </h3>
+                <h3 className="text-lg font-semibold mb-1">Fast Impact</h3>
                 <p className="text-gray-600">
-                  Hire part-time, project-based, or seasonal—whatever fits your
-                  need.
+                  Most leaders start contributing in under 10 days.
                 </p>
               </div>
             </div>
@@ -61,10 +57,10 @@ export default function Whysection() {
               />
               <div>
                 <h3 className="text-lg font-semibold mb-1">
-                  Scalable and Flexible
+                  Custom Engagement Models
                 </h3>
                 <p className="text-gray-600">
-                  A solution that grows with your business.
+                  From a few hours a week to project-based mandates.
                 </p>
               </div>
             </div>
@@ -76,10 +72,10 @@ export default function Whysection() {
               />
               <div>
                 <h3 className="text-lg font-semibold mb-1">
-                  No Long-Term Commitments
+                  From a few hours a week to project-based mandates.
                 </h3>
                 <p className="text-gray-600">
-                  Scale up or down without employment obligations.
+                  Scale up or down without contractual lock-ins.
                 </p>
               </div>
             </div>

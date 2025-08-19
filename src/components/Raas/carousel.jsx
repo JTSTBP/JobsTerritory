@@ -7,14 +7,15 @@ export default function RaaSCarousel() {
     {
       img: "/images/handshake.png", // Replace with your image
       title: "First Unicorn Hire",
-      subtitle: "Start-up / Bootstrapped / Pre-seed / Seed",
+      subtitle:
+        "Start-up / Bootstrapped / Pre-seed / Seed// Early Stage Growth",
       description:
-        "Perfect for early-stage companies making their first strategic hires to build the foundation of their team.",
+        "Perfect for startups, bootstrapped ventures, and early funded companies making their first key hires to shape culture and drive growth.",
       points: [
         "Founder-level attention",
         "Cultural fit focus",
         "Flexible engagement",
-        "Cost-effective solutions",
+        "Unlimited Hiring, One Fixed Cost",
       ],
     },
     // Add more slides if needed
@@ -35,11 +36,12 @@ export default function RaaSCarousel() {
         <section className="py-12 px-6 text-[#1B084C]">
           <div className="max-w-6xl mx-auto text-center mb-10">
             <h2 className="text-3xl sm:text-4xl font-bold font-museo">
-              Who Did We Create RaaS For?
+              Who We Built RaaS For
             </h2>
             <p className=" mt-2">
-              No matter your company's size, RaaS ensures smarter, faster
-              hiring.
+              For founders and leaders who can’t afford slow or risky hires,
+              RaaS is your embedded hiring engine — delivering the right people,
+              faster and smarter.
             </p>
           </div>
 
@@ -73,10 +75,10 @@ export default function RaaSCarousel() {
                 ))}
               </ul>
 
-              <p className="">
+              {/* <p className="">
                 Perfect for early-stage companies making their first strategic
                 hires to build the foundation of their team.
-              </p>
+              </p> */}
             </div>
           </div>
 
@@ -133,12 +135,12 @@ export default function RaaSCarousel() {
             />
 
             <h3 className="text-3xl sm:text-4xl  mb-4 font-museo font-bold">
-              Ready to Transform
-              <span className="font-normal"> Your Hiring Process?</span>
+              Ready to Hire
+              <span className="font-normal"> Without Limits?</span>
             </h3>
             <p className="text-white/90 mb-6 max-w-2xl mx-auto font-inter">
-              Let's discuss how our recruitment solutions can help you find the
-              perfect talent for your organization
+              Let’s build your next growth driving team — faster, smarter, and
+              without hiring headaches.
             </p>
             <motion.button
               whileHover={{

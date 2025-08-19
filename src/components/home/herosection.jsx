@@ -154,7 +154,7 @@ const HeroSection = () => {
               transition={{ delay: 0.8, duration: 0.6 }}
               className="relative w-full z-50"
             >
-              <div className="flex flex-col items-start w-full max-w-[28rem] space-y-6">
+              <div className="flex flex-col items-start w-full max-w-[24rem] space-y-6">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -217,7 +217,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.6 }}
-            className="absolute bottom-10 right-10 z-50 hidebuttons:hidden w-45%]"
+            className="absolute bottom-10 right-10 z-50 hidebuttons:hidden w-40%]"
           >
             <div className="flex items-center gap-6">
               {/* Hire Now */}
@@ -226,7 +226,7 @@ const HeroSection = () => {
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 "
               >
-                <button className="xl:w-[230px] flex items-center justify-center bg-gradient-to-r from-[#2c1361] to-[#7300ff] text-white text-sm font-medium px-6 py-2 rounded-full border-2 border-[#cfc0ff] shadow-md">
+                <button className="xl:w-[200px] flex items-center justify-center bg-gradient-to-r from-[#2c1361] to-[#7300ff] text-white text-sm font-medium px-6 py-2 rounded-full border-2 border-[#cfc0ff] shadow-md">
                   Hire Now
                 </button>
                 <div className="w-1 h-0.5 bg-[#cfc0ff]" />
@@ -245,7 +245,7 @@ const HeroSection = () => {
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2"
               >
-                <button className="xl:w-[230px] flex items-center justify-center bg-gradient-to-r from-[#7300ff] to-[#2c1361] text-white text-sm font-medium px-6 py-2 rounded-full border-2 border-[#cfc0ff] shadow-md">
+                <button className="xl:w-[200px] flex items-center justify-center bg-gradient-to-r from-[#7300ff] to-[#2c1361] text-white text-sm font-medium px-6 py-2 rounded-full border-2 border-[#cfc0ff] shadow-md">
                   Watch Demo
                 </button>
                 <div className="w-1 h-0.5 bg-[#cfc0ff]" />

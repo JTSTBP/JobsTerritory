@@ -15,7 +15,74 @@ import { motion, AnimatePresence } from "framer-motion";
 
 
 const Homepage = () => {
+const industries = [
+  {
+    title: "Technology & Startups",
+    description:
+      "Software engineers, product managers, data scientists, and tech leaders. 2,000+ placements and counting.",
+    placements: "2000+",
+    bg: "images/bg1.png",
+    text: "text-[#FFFFFF]",
+  },
+  {
+    title: "Healthcare & Life Sciences",
+    description:
+      "Medical experts, innovators, and compliance leaders making quality care accessible.",
+    placements: "800+",
+    bg: "images/bg4.png",
+    text: "text-[#1B084C]",
+  },
+  {
+    title: "E-Commerce & Retail",
+    description:
+      "Digital marketing, operations, supply chain, and customer experience professionals.",
+    placements: "1500+",
+    bg: "images/bg2.png",
+    text: "text-[#FFFFFF]",
+  },
+  {
+    title: "Banking & Financial Services",
+    description:
+      "Banking, insurance, fintech, and investment professionals who drive stability and growth.",
+    placements: "1000+",
+    bg: "images/bg5.png",
+    text: "text-[#1B084C]",
+  },
+  {
+    title: "Engineering & Manufacturing",
+    description:
+      "Mechanical, electrical, industrial engineers, and production managers who optimize operations.",
+    placements: "1200+",
+    bg: "images/bg3.png",
+    text: "text-[#1B084C]",
+  },
 
+  {
+    title: "Media & Creative",
+    description:
+      "Content creators, marketers, and storytellers who inspire audiences.",
+    placements: "1500+",
+    bg: "images/bg6.png",
+    text: "text-[#FFFFFF]",
+  },
+  {
+    title: "Logistics & Supply Chain",
+    description:
+      "Professionals ensuring your operations run on time, on budget, and without disruption.",
+    placements: "700+",
+    bg: "images/bg7.png",
+    large: true,
+    text: "text-[#FFFFFF]",
+  },
+  {
+    title: "Real Estate",
+    description:
+      "Strategic leaders in development, sales, marketing, and investment who deliver measurable returns.",
+    placements: "500+",
+    bg: "images/bg8.png",
+    text: "text-[#1B084C]",
+  },
+];
  
   return (
     <div>
@@ -25,7 +92,8 @@ const Homepage = () => {
       <Services />
       <SuccessStories />
       <Testimonial />
-      <IndustriesGrid />
+      <IndustriesGrid industries={industries} />
+
       <FAQSection />
 
       {/* Bottom CTA Section */}

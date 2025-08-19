@@ -1,3 +1,7 @@
+
+
+
+import { useState, useEffect, useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
 
 export default function BlogsSection() {
@@ -11,99 +15,146 @@ export default function BlogsSection() {
       id: 2,
       title: "How to Scale Your Team Without Compromising",
       image: "/images/blogsimg.png",
+      bg: "#1B084C",
+    },
+    {
+      id: 3,
+      title: "Recruitment Automation Trends in 2025",
+      image: "/images/blogsimg1.png",
+    },
+    {
+      id: 4,
+      title: "Building a Future-Ready Workforce",
+      image: "/images/blogsimg.png",
+      bg: "#1B084C",
+    },
+    {
+      id: 3,
+      title: "Recruitment Automation Trends in 2025",
+      image: "/images/blogsimg1.png",
+    },
+    {
+      id: 4,
+      title: "Building a Future-Ready Workforce",
+      image: "/images/blogsimg.png",
+      bg: "#1B084C",
     },
   ];
 
+  // Group blogs into sets of 2
+  const groupedBlogs = [];
+  for (let i = 0; i < blogs.length; i += 2) {
+    groupedBlogs.push(blogs.slice(i, i + 2));
+  }
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % groupedBlogs.length);
+    }, 4000); // every 4s
+    return () => clearInterval(interval);
+  }, [groupedBlogs.length]);
+
+
+
+  const [containerHeight, setContainerHeight] = useState(0);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      setContainerHeight(containerRef.current.offsetHeight);
+    }
+  }, [currentIndex]);
+
+  console.log(containerHeight, "containerHeight");
   return (
     <div
-      className="py-16 px-6"
+      className="py-16 sm:px-6 relative w-full"
       style={{
         backgroundImage: "url(/images/processbg.png)",
         backgroundSize: "cover",
+        minHeight: (containerHeight ? containerHeight + 150 : 600) + "px",
       }}
     >
-      <div className="max-w-6xl mx-auto">
-        {/* Main Card Container */}
+      {groupedBlogs.map((group, index) => (
         <div
-          className="rounded-3xl shadow-lg p-8 h-[122vh] w-[83%]"
-          style={{
-            backgroundImage: "url(/images/blogsbg.png)",
-            backgroundSize: "cover",
-          }}
+          key={index}
+          ref={currentIndex === index ? containerRef : null}
+          className={`absolute transition-all duration-700 ease-in-out w-[97%] flex justify-center ${
+            currentIndex === index
+              ? "z-20 scale-100 opacity-100"
+              : currentIndex === (index + 1) % groupedBlogs.length
+              ? "z-10 scale-95 opacity-70 translate-y-8"
+              : currentIndex === (index + 2) % groupedBlogs.length
+              ? "z-0 scale-90 opacity-50 translate-y-14"
+              : "hidden"
+          }`}
         >
-          {/* Top Row */}
-          <div className="flex justify-between items-start mb-8">
-            <div>
-              <h2
-                className="text-3xl font-bold mb-2"
+          {/* Main Card Container */}
+          <div className="rounded-3xl shadow-lg p-8 w-[83%] bg-white max-w-5xl mx-auto">
+            {/* Top Row */}
+            <div className="flex md:flex-row flex-col gap-3 md:justify-between items-start mb-8">
+              <div>
+                <h2
+                  className="text-3xl md:text-4xl font-semibold mb-2 font-museo"
+                  style={{ color: "#1B084C" }}
+                >
+                  Blogs
+                </h2>
+                <p className="text-gray-700 max-w-lg">
+                  Explore helpful resources on recruitment, hiring trends, and
+                  workplace tips.
+                </p>
+              </div>
+              <a
+                href="#"
+                className="flex items-center gap-1 text-sm font-semibold"
                 style={{ color: "#1B084C" }}
               >
-                Blogs
-              </h2>
-              <p className="text-gray-700 max-w-lg">
-                Explore helpful resources on recruitment, hiring trends, and
-                workplace tips.
-              </p>
+                See Our Blogs <ArrowUpRight size={16} />
+              </a>
             </div>
-            <a
-              href="#"
-              className="flex items-center gap-1 text-sm font-semibold"
-              style={{ color: "#1B084C" }}
-            >
-              See Our Blogs <ArrowUpRight size={16} />
-            </a>
-          </div>
 
-          {/* Blog Cards */}
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {blogs.map((blog, index) => (
-              <div
-                key={blog.id}
-                className="relative rounded-2xl overflow-hidden h-72"
-              >
-                <img
-                  src={blog.image}
-                  alt={blog.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-4">
-                  <button
-                    className={`text-white text-sm px-4 py-1 rounded-full mb-2 ${
-                      index === 0 ? "bg-[#1B084C]" : "bg-[#6A1FFF]"
-                    }`}
-                  >
-                    Read More
-                  </button>
-                  <p className="text-white text-sm">{blog.title}</p>
+            {/* Blog Cards (2 per slide) */}
+            <div className="flex md:flex-row flex-col justify-center items-center gap-4 md:justify-evenly">
+              {group.map((blog) => (
+                <div
+                  key={blog.id}
+                  className="relative sm:w-[320px] sm:h-[420px] rounded-2xl overflow-hidden"
+                >
+                  {/* Full image */}
+                  <img
+                    src={blog.image}
+                    alt={blog.title}
+                    className="max-w-[300px]  md:max-w-auto w-full h-full object-cover"
+                  />
+
+                  {/* Bottom-left text */}
+                  <div className="absolute bottom-4 left-4 text-left w-[186px]">
+                    <button
+                      className={`${
+                        blog.bg === "#1B084C"
+                          ? "bg-[#1B084C] text-white"
+                          : "bg-white text-[#1B084C]"
+                      } text-sm font-medium px-4 py-1 rounded-full mb-2 shadow-md`}
+                    >
+                      Read More
+                    </button>
+                    <p
+                      className={`${
+                        blog.bg === "#1B084C" ? "text-[#1B084C]" : "text-white"
+                      } text-lg font-semibold leading-snug`}
+                    >
+                      {blog.title}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div> */}
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {blogs.map((blog, index) => (
-              <div className="relative w-[320px] h-[420px] rounded-2xl overflow-hidden">
-                {/* Full image */}
-                <img
-                  src={blog.image}
-                  alt={blog.title}
-                  className="w-full h-full object-cover"
-                />
-
-                {/* Bottom-left text */}
-                <div className="absolute bottom-4 left-4 text-left">
-                  <button className="bg-white text-[#1B084C] text-sm font-medium px-4 py-1 rounded-full mb-2 shadow-md">
-                    Read More
-                  </button>
-                  <p className="text-white text-lg font-semibold leading-snug">
-                    {blog.title}
-                  </p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 }

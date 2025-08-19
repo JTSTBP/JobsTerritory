@@ -42,11 +42,11 @@ const steps = [
 export default function PayPerHireProcess() {
   return (
     <div>
-      <section className=" text-white py-16   font-sans mt-10 bg-[#EFEFEF]">
+      <section className=" text-white py-16    mt-10 bg-[#EFEFEF]">
         {/* Heading */}
-        <div className="  mx-auto mb-14 flex flex-col justify-end items-end text-[#1B084C]">
+        <div className="  mx-auto mb-14 flex flex-col justify-center items-center text-[#1B084C]">
           <h1 className="text-3xl md:text-5xl  font-museo">
-            How Pay Per Hire Works
+            Your Simple, Transparent Hiring Journey
           </h1>
           <p className="text-sm md:text-base mt-2 ">
             Simple, transparent process with payment only upon successful
@@ -91,12 +91,12 @@ export default function PayPerHireProcess() {
         </div>
       </section>
       <HireSection
-      title="Ready to Hire"
-      highlight="Risk-Free?"
-      description="Start your risk-free recruitment journey today. No upfront costs, no long-term commitments."
-      buttonText="Start Hiring Now"
-      backgroundImage="/images/trasfrom.png"
-    />
+        title="Hire Smarter"
+        highlight="Pay Only for Results"
+        description="Pay Only for Results."
+        buttonText="Start Hiring Now"
+        backgroundImage="/images/trasfrom.png"
+      />
     </div>
   );
 }

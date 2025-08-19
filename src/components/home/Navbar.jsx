@@ -67,13 +67,13 @@ const Navbar = () => {
                         {showResources && (
                           <div className="absolute mt-2 w-40 bg-white text-black rounded shadow-lg z-50">
                             <a
-                              href="#"
+                              href="/CaseStudies"
                               className="block px-4 py-2 hover:bg-gray-200"
                             >
                               Case Studies
                             </a>
                             <a
-                              href="#"
+                              href="/Blogs"
                               className="block px-4 py-2 hover:bg-gray-200"
                             >
                               Blogs
@@ -138,13 +138,13 @@ const Navbar = () => {
                         {showResources && (
                           <div className="absolute mt-2 w-40 bg-white text-black rounded shadow-lg z-50">
                             <a
-                              href="#"
+                              href="/CaseStudies"
                               className="block px-4 py-2 hover:bg-gray-200"
                             >
                               Case Studies
                             </a>
                             <a
-                              href="#"
+                              href="/Blogs"
                               className="block px-4 py-2 hover:bg-gray-200"
                             >
                               Blogs
@@ -186,13 +186,13 @@ const Navbar = () => {
                       {showResources && (
                         <div className="absolute mt-2 w-40 bg-white text-black rounded shadow-lg z-50">
                           <a
-                            href="#"
+                            href="/CaseStudies"
                             className="block px-4 py-2 hover:bg-gray-200"
                           >
                             Case Studies
                           </a>
                           <a
-                            href="#"
+                            href="/Blogs"
                             className="block px-4 py-2 hover:bg-gray-200"
                           >
                             Blogs
@@ -302,13 +302,13 @@ const Navbar = () => {
                 {showResources && (
                   <div className="ml-4 border-l border-gray-200 pl-4">
                     <a
-                      href="/case-studies"
+                      href="/CaseStudies"
                       className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md text-sm"
                     >
                       Case Studies
                     </a>
                     <a
-                      href="/blogs"
+                      href="/Blogs"
                       className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md text-sm"
                     >
                       Blogs

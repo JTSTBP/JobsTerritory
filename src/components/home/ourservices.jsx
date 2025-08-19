@@ -14,14 +14,13 @@ const Services = () => {
   const cardData = [
     {
       // you can use emoji or image path
-      heading: "Recruitment as a Service (RAAS)",
+      heading: "RAAS — Recruitment as a Service",
       description:
-        "Dedicated recruiters tailored to your business needs, culture, and growth objectives.",
+        "Your business deserves more than a recruiter. It deserves a dedicated partner who understands your goals, culture, and vision.",
       points: [
-        "Dedicated recruitment team",
-        "Custom hiring processes",
-        "Industry expertise",
-        "Scalable solutions",
+        "Custom Hiring – ",
+        "Industry Expertise – ",
+        "Scalable Solutions – ",
       ],
       buttonText: "Learn More",
       image: "/images/vec1.png",
@@ -30,13 +29,12 @@ const Services = () => {
     {
       // you can use emoji or image path
       heading: "Pay Per Hire",
-      description:
-        "Pay only for successful hires with no long-term commitment. Risk-free recruitment solution.",
+      description: "Hire with confidence—only pay when we deliver results.",
       points: [
-        "No upfront costs",
-        "Pay only for results",
-        "Flexible engagement",
-        "Quality guarantee",
+        "No Upfront Costs – ",
+        "Pay for Results –",
+        "Scale on Demand – ",
+        "Quality Guarantee – ",
       ],
       buttonText: "Learn More",
       image: "/images/vec2.png",
@@ -44,14 +42,14 @@ const Services = () => {
     },
     {
       // you can use emoji or image path
-      heading: "C-Suite Hiring",
+      heading: "Fractional Hiring",
       description:
-        "Executive search and placement for top-tier leadership positions across all industries.",
+        "Leadership on your terms. Access experienced executives—only when you need them.",
       points: [
-        "Executive search expertise",
-        "Leadership assessment",
-        "Confidential process",
-        "Global network access",
+        "Executive Search Expertise -",
+        "Leadership Assessment – ",
+        "Confidential Process –",
+        "Global Network – ",
       ],
       buttonText: "Learn More",
       image: "/images/vec3.png",
@@ -103,8 +101,6 @@ const Services = () => {
             hiring needs and drive business growth
           </p>
         </motion.div>
-
-        
       </div>
 
       <motion.div
@@ -207,8 +203,8 @@ const Services = () => {
             <span className="font-bold"> Your Hiring Process?</span>
           </h3>
           <p className="text-white/90 mb-6 max-w-2xl mx-auto font-inter">
-            Let's discuss how our recruitment solutions can help you find the
-            perfect talent for your organization
+            The right hire can rewrite your company’s future. Let’s find the
+            people who will take your business to the next level.
           </p>
           <motion.button
             whileHover={{

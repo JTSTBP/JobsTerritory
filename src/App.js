@@ -11,6 +11,12 @@ import RaasPage from "./pages/Raas";
 import PayperHire from "./pages/payperhire";
 import FractionalHiring from "./pages/fractionalhiring";
 import ContactUs from "./pages/contactus";
+import CaseStudies from "./pages/casestudies";
+import CaseStudiesMain from "./components/casestudies/mainsection";
+import CaseStudy from "./pages/casestudies";
+import BlogsPage from "./pages/blogs";
+import SeparateBlogs from "./pages/separateblog";
+import ViewCaseStudy from "./pages/viewcasestudy";
 
 
 
@@ -26,7 +32,11 @@ export default function App() {
           <Route path="/Raas" element={<RaasPage />} />
           <Route path="/FractionHiring" element={<FractionalHiring />} />
           <Route path="/Payperhire" element={<PayperHire />} />
-          <Route path="/ContactUs" element={<ContactUs/>}/>
+          <Route path="/ContactUs" element={<ContactUs />} />
+          <Route path="/CaseStudies" element={<CaseStudy />} />
+          <Route path="/ViewCaseStudy" element={<ViewCaseStudy/>}/>
+          <Route path="/Blogs" element={<BlogsPage />} />
+          <Route path="/eachBlog" element={<SeparateBlogs/>}/>
         </Routes>
       </Router>
       <ToastContainer position="top-right" autoClose={3000} />

@@ -13,9 +13,9 @@ const PayperHire = () => {
       <Navbar />
       <Bannersection
         backgroundImage="/images/herobgpph.png"
-        heading="Simple & Smart !"
-        heading1="Pay Per Hire"
-        paragraph="Risk-free recruitment solution. Pay only when we successfully place a candidate who joins your organization. No upfront costs, no retainer fees."
+        heading="Pay Per Hire  "
+        heading1="Talent Without the Risk"
+        paragraph="Hire with confidence — you pay only for successful placements. No upfront costs, no hidden fees, no ongoing commitments."
         primaryButtonText="Get Started"
         secondrybuttontext="Learn More"
         onPrimaryButtonClick={() => console.log("Demo clicked")}
@@ -23,7 +23,7 @@ const PayperHire = () => {
       />
       <WhyChoosePayPerHire />
       <PayPerHireProcess />
-      <FAQSection/>
+      <FAQSection />
       <Footer />
     </div>
   );
