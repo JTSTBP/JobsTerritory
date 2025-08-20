@@ -598,7 +598,7 @@ export default function RotatingCardWithText() {
       </div>
 
       {/* RIGHT side text */}
-      <div className="max-w-3xl flex flex-col text-center md:text-left flex-1 self-end">
+      <div className="max-w-5xl flex flex-col text-center md:text-left flex-1 self-end">
         <div>
           {/* Main heading */}
           <h2 className="text-3xl md:text-4xl font-bold text-[#1B084C] font-museo mb-3">

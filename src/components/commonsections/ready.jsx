@@ -59,16 +59,17 @@ const HireSection = ({
         >
           <span>{buttonText}</span>
         </motion.button>
-        <motion.button
-          whileHover={{
-            scale: 1.05,
-            boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
-          }}
-          whileTap={{ scale: 0.95 }}
-          className="text-[#fff] ml-3 bg-[rgb(213_206_255/56%)] px-8 py-3 rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center space-x-2"
-        >
-          <span>{buttontext2}</span>
-        </motion.button>
+        {buttontext2 &&
+          <motion.button
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 20px 40px rgba(0,0,0,0.2)",
+            }}
+            whileTap={{ scale: 0.95 }}
+            className="text-[#fff] ml-3 bg-[rgb(213_206_255/56%)] px-8 py-3 rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center space-x-2"
+          >
+            <span>{buttontext2}</span>
+          </motion.button>}
       </div>
     </motion.div>
   );

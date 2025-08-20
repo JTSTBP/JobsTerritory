@@ -1,7 +1,9 @@
 import { ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function CaseStudiesMain() {
+  const navigate=useNavigate()
   const caseStudies = [
     {
       logo: "/images/bigbasket.png",
@@ -92,6 +94,7 @@ export default function CaseStudiesMain() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 mt-5 "
+                onClick={()=>{navigate("/ViewCaseStudy");}}
               >
                 <button className="xl:w-[230px] flex items-center justify-center bg-gradient-to-r from-[#2c1361] to-[#7300ff] text-white text-sm font-medium px-6 py-2 rounded-full border-2 border-[#cfc0ff] shadow-md">
                   View Case Study

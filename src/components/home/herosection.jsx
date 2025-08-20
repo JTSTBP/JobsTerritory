@@ -12,10 +12,12 @@ import {
   Target,
   Award,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = 4;
+  const navigate = useNavigate();
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % totalSlides);
   const prevSlide = () =>
@@ -224,6 +226,7 @@ const HeroSection = () => {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={()=>{navigate("/ContactUs")}}
                 className="flex items-center gap-2 "
               >
                 <button className="xl:w-[200px] flex items-center justify-center bg-gradient-to-r from-[#2c1361] to-[#7300ff] text-white text-sm font-medium px-6 py-2 rounded-full border-2 border-[#cfc0ff] shadow-md">
@@ -243,10 +246,16 @@ const HeroSection = () => {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() =>
+                  window.open(
+                    "https://calendly.com/jobsterritory/30min",
+                    "_blank"
+                  )
+                }
                 className="flex items-center gap-2"
               >
                 <button className="xl:w-[200px] flex items-center justify-center bg-gradient-to-r from-[#7300ff] to-[#2c1361] text-white text-sm font-medium px-6 py-2 rounded-full border-2 border-[#cfc0ff] shadow-md">
-                  Watch Demo
+                  Book a Demo
                 </button>
                 <div className="w-1 h-0.5 bg-[#cfc0ff]" />
                 <div className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-[#7300ff] to-[#2c1361] border-2 border-[#cfc0ff] shadow-md">

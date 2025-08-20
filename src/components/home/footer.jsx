@@ -385,39 +385,35 @@ const Footer = () => {
                       className="flex items-start space-x-3 text-gray-400 hover:text-primary-400 transition-all duration-200"
                     >
                       <MapPin size={18} className="mt-1 flex-shrink-0" />
-                      <span>
-                       Bangalore
-                       
-                      </span>
+                      <span>Bangalore</span>
                     </motion.div>
                   </div>
                 </div>
-
-                {/* Quick Links */}
-                <div>
-                  <h4 className="text-lg font-semibold mb-4 text-white">
-                    Quick Links
-                  </h4>
-                  <ul className="space-y-2">
-                    {quickLinks.slice(0, 4).map((link, index) => (
-                      <motion.li
-                        key={link}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.4, delay: index * 0.05 }}
-                        viewport={{ once: true }}
-                      >
-                        <a
-                          href="#"
-                          className="text-gray-400 hover:text-primary-400 transition-colors duration-200 text-sm"
-                        >
-                          {link}
-                        </a>
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
               </motion.div>
+            </div>
+            {/* Quick Links */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4 text-white">
+                Quick Links
+              </h4>
+              <ul className="space-y-2">
+                {quickLinks.slice(0, 4).map((link, index) => (
+                  <motion.li
+                    key={link}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.05 }}
+                    viewport={{ once: true }}
+                  >
+                    <a
+                      href="#"
+                      className="text-gray-400 hover:text-primary-400 transition-colors duration-200 text-sm"
+                    >
+                      {link}
+                    </a>
+                  </motion.li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

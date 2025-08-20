@@ -17,6 +17,7 @@ import CaseStudy from "./pages/casestudies";
 import BlogsPage from "./pages/blogs";
 import SeparateBlogs from "./pages/separateblog";
 import ViewCaseStudy from "./pages/viewcasestudy";
+import ScrollToTop from "./pages/scrollTop";
 
 
 
@@ -27,6 +28,7 @@ export default function App() {
   return (
     <>
       <Router>
+        <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/Raas" element={<RaasPage />} />

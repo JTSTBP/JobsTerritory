@@ -45,14 +45,14 @@ const ClientLogos = () => {
       <div className="relative w-full h-40 sm:h-60 overflow-hidden">
         {/* Vector Background */}
         <img
-          src="/images/vector1.png"
+          src="/images/vector.png"
           alt="background"
           className="absolute inset-0 w-full h-full z-0"
         />
 
         {/* Scrolling Logos */}
         <div className="absolute inset-0 flex  overflow-hidden z-10">
-          <div className="flex animate-scroll gap-7">
+          <div className="flex animate-scroll gap-7 md:gap-32 ">
             {allImages.map((src, i) => (
               <div
                 key={i}

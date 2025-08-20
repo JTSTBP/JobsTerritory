@@ -342,13 +342,7 @@ useEffect(() => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <a
-              href="#"
-              className="flex justify-end gap-1 text-sm font-semibold text-right mb-3"
-              style={{ color: "#1B084C" }}
-            >
-              See Our Blogs <ArrowUpRight size={16} />
-            </a>
+           
             <h2 className="text-xl font-bold text-[#6A1FFF] font-museo">
               {items[active].heading}
             </h2>

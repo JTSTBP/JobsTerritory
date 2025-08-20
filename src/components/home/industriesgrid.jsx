@@ -1,6 +1,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -15,6 +16,7 @@ const cardVariants = {
 };
 
 const IndustriesGrid = ({ industries, separate }) => {
+  const navigate=useNavigate()
   return (
     <div className="py-12 px-10 md:px-8 lg:px-16 bg-[#EFEFEF] text-[#1B084C]">
       {/* Heading */}
@@ -183,7 +185,7 @@ const IndustriesGrid = ({ industries, separate }) => {
               No matter your sector, we can find the right people to drive your
               business forward. Let’s talk about your hiring needs.
             </p>
-            <button className="bg-[#1B084C] text-white px-6 py-2 rounded-full hover:bg-purple-700 transition">
+            <button className="bg-[#1B084C] text-white px-6 py-2 rounded-full hover:bg-purple-700 transition" onClick={()=>{navigate("/ContactUs")}}>
               Contact Us
             </button>
           </div>
