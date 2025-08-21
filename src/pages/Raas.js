@@ -10,6 +10,7 @@ import Footer from "../components/home/footer";
 import AboutJobsTerritory from "../components/Raas/about";
 import BlogsSection from "../components/Raas/blogs";
 import IndustriesGrid from "../components/home/industriesgrid";
+import FAQSection from "../components/home/faqs";
 
 const industries = [
   {
@@ -97,6 +98,70 @@ const industries = [
     img: "/images/ind8.png",
   },
 ];
+
+const faqData = [
+  {
+    question: "What is RAAS (Recruiter-as-a-Service)?",
+    icon: "/images/f1.png",
+    answer:
+      "RAAS is a flexible recruitment subscription where Jobs Territory becomes your extended hiring team. You pay a fixed monthly cost and get unlimited hiring support without extra fees per candidate.",
+  },
+  {
+    question: "How does RAAS differ from Pay Per Hire?",
+    icon: "/images/f2.png",
+    answer:
+      "In Pay Per Hire, you pay per successful placement. In RAAS, you pay a flat monthly fee for unlimited roles, making it cost-effective for fast-scaling businesses.",
+  },
+  {
+    question: "What are the main benefits of RAAS?",
+    icon: "/images/f3.png",
+    answer:
+      "Fixed monthly cost, unlimited hiring, lightning-fast deployment (within 72 hours), and up to 40% savings compared to in-house hiring.",
+  },
+  {
+    question: "Is there a limit on the number of hires under RAAS?",
+    icon: "/images/f4.png",
+    answer:
+      "No limits at all. With RAAS, you can hire as many roles as needed during the subscription period at zero extra cost.",
+  },
+  {
+    question: "Can RAAS handle bulk and niche roles together?",
+    icon: "/images/f5.png",
+    answer:
+      "Yes, our team manages both volume hiring and specialized executive searches under the same subscription.",
+  },
+  {
+    question: "Is RAAS suitable for startups and growing businesses?",
+    icon: "/images/f6.png",
+    answer:
+      "Absolutely. Startups love RAAS because it gives them predictable costs, unlimited hires, and flexibility to scale without hiring an in-house HR team.",
+  },
+  {
+    question: "How much does RAAS cost?",
+    icon: "/images/f7.png",
+    answer:
+      "RAAS works on a fixed monthly subscription fee, customized to your business size and hiring needs—no hidden charges, no per-hire costs.",
+  },
+  {
+    question: "How fast can RAAS start delivering results?",
+    icon: "/images/f1.png",
+    answer:
+      "We can deploy a dedicated recruiter/team and start hiring for you within 72 hours of signup.",
+  },
+  {
+    question: "Does RAAS include onboarding and management support?",
+    icon: "/images/f2.png",
+    answer:
+      "Yes, RAAS covers hiring, onboarding, and candidate management to make the process completely seamless.",
+  },
+  {
+    question: "Why choose Jobs Territory’s RAAS model?",
+    icon: "/images/f3.png",
+    answer:
+      "Because you get unlimited hires at a fixed cost, faster scaling, DEI-aligned recruitment, and a trusted hiring partner that grows with your business.",
+  },
+];
+
 const RaasPage = () => {
   return (
     <div>
@@ -122,7 +187,8 @@ const RaasPage = () => {
       <RaaSCarousel />
       <AboutJobsTerritory />
       <BlogsSection />
-      <IndustriesGrid industries={industries} separate="true"/>
+      <IndustriesGrid industries={industries} separate="true" />
+      <FAQSection faqData={faqData}/>
       <Footer />
     </div>
   );

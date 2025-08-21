@@ -82,7 +82,52 @@ const industries = [
     bg: "images/bg8.png",
     text: "text-[#1B084C]",
   },
-];
+  ];
+  
+  const faqData = [
+    {
+      question: "How does Recruitment as a service (RAAS) work?",
+      icon: "/images/f1.png",
+      answer:
+        "Recruitment as a Service (RaaS) provides on-demand hiring support with flexible pricing and dedicated recruiting experts.",
+    },
+    {
+      question: "What is Pay Per Hire and how does pricing work?",
+      icon: "/images/f2.png",
+      answer:
+        "Pay Per Hire allows you to pay only for successful placements. Pricing is based on the role and level of expertise required.",
+    },
+    {
+      question: "What type of industries do you serve?",
+      icon: "/images/f3.png",
+      answer:
+        "We serve multiple industries including IT, Healthcare, Finance, Manufacturing, and more.",
+    },
+    {
+      question: "How fast is your hiring turnaround time?",
+      icon: "/images/f4.png",
+      answer:
+        "Our average hiring turnaround time is 2–4 weeks depending on the role and complexity.",
+    },
+    {
+      question: "How do you ensure candidate quality and cultural fit?",
+      icon: "/images/f5.png",
+      answer:
+        "We conduct multiple interview rounds, skills assessments, and cultural fit analysis to ensure quality hires.",
+    },
+    {
+      question: "How do I get started with Jobs Territory?",
+      icon: "/images/f6.png",
+      answer:
+        "Simply contact us, share your hiring needs, and our team will onboard you within 24 hours.",
+    },
+    {
+      question: "What guarantees do you provide?",
+      icon: "/images/f7.png",
+      answer:
+        "We provide replacement guarantees for a set period in case the hired candidate leaves early.",
+    },
+  ];
  
   return (
     <div>
@@ -94,7 +139,7 @@ const industries = [
       <Testimonial />
       <IndustriesGrid industries={industries} />
 
-      <FAQSection />
+      <FAQSection faqData={faqData} />
 
       {/* Bottom CTA Section */}
       <section

@@ -87,7 +87,7 @@ export default function WhychooseRaas() {
         {/* RIGHT: Image */}
         <div className="flex justify-center">
           <img
-            src="/images/whyraas.png"
+            src="/images/wtraas.jpg"
             alt="JT RaaS Illustration"
             className="rounded-lg  w-full md:w-1/2 lg:w-full h-auto object-cover"
           />
